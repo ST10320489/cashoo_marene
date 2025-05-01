@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/chinchillaHatLayout"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="75dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="12dp"
+                android:src="@drawable/ic_back" />
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="80" />
+
+        <!-- Title -->
+        <TextView
+            android:text="Meet Your Chinchilla!"
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_heading"
+            android:fontFamily="@font/inter_extrabold"
+            android:layout_marginTop="41dp"
+            android:layout_marginBottom="21dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:text="Customize your avatar and make it your own—choose colours, hats, and fun accessories to match your style!"
+            android:id="@+id/subtitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/text"/>
+
+        <!-- Chinchilla Preview Image -->
+        <ImageView
+            android:id="@+id/chinchillaImage"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@drawable/black_nohat"
+        android:contentDescription="Chinchilla Preview" />
+
+        <!-- Hat Selection Buttons -->
+        <LinearLayout
+            android:id="@+id/hatButtonsLayout"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Hat Color Buttons -->
+            <View
+                android:id="@+id/sailorButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#0271C0"
+                android:background="@drawable/circle_background1"
+                android:layout_margin="8dp" />
+
+            <View
+                android:id="@+id/mexicanButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#E68939"
+                android:background="@drawable/circle_background1"
+                android:layout_margin="8dp" />
+
+            <View
+                android:id="@+id/strawberryButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#E96854"
+                android:background="@drawable/circle_background1"
+                android:layout_margin="8dp" />
+
+            <View
+                android:id="@+id/pirateButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#414443"
+                android:background="@drawable/circle_background1"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+
+        <!-- Next Button -->
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorLink="#48B381"
+            android:textSize="16dp"
+            app:rippleColor="#48B381"/>
+    </LinearLayout>
+</ScrollView>

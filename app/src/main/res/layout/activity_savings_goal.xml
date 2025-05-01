@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="75dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:padding="12dp"
+                android:src="@drawable/ic_back" />
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="40" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Your Savings Goals"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_heading"
+            android:fontFamily="@font/inter_extrabold"
+            android:layout_marginTop="41dp"
+            android:layout_marginBottom="21dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Decide how much you want to save! Set a minimum goal to start small and save big"
+            android:textSize="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/text" />
+
+        <!-- Dropdown Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How often do you get paid?"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/text_heading"
+            android:textSize="16sp"/>
+
+        <!-- Styled Dropdown -->
+        <Spinner
+            android:id="@+id/paydaySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="21dp"
+            android:background="@drawable/bordered_box"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Select your payday"
+            android:paddingLeft="21dp"
+            android:paddingTop="16dp"
+            android:paddingRight="21dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <!-- Left TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="What's your salary?"
+                android:textColor="@color/text_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Right TextView -->
+            <TextView
+                android:id="@+id/salaryValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R0"
+                android:textColor="@color/text_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <!-- Slider 1 -->
+        <SeekBar
+            android:id="@+id/salarySlider"
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/slider_progress"
+            android:thumb="@drawable/ic_handle"
+            android:layout_marginBottom="32dp"
+            android:max="80000"/>
+
+
+
+        <!-- Slider 2 Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <!-- Left TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Set a minimum savings goal"
+                android:textColor="@color/text_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Right TextView -->
+            <TextView
+                android:id="@+id/minSavingsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R0"
+                android:textColor="@color/text_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/minSavingsSlider"
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/slider_progress"
+            android:thumb="@drawable/ic_handle"
+            android:max="80000"/>
+
+        <TextView
+            android:id="@+id/learnSavings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Learn More"
+            android:textColor="@color/tertiary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+        <!-- Slider 3 Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <!-- Left TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Set a maximum spending goal"
+                android:textColor="@color/text_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Right TextView -->
+            <TextView
+                android:id="@+id/maxSpendingValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R0"
+                android:textColor="@color/text_heading"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/maxSpendingSlider"
+            android:layout_width="match_parent"
+            android:layout_height="11dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/slider_progress"
+            android:thumb="@drawable/ic_handle"
+            android:max="80000"/>
+
+        <TextView
+            android:id="@+id/learnSpending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/inter_semibold"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Learn More"
+            android:textColor="@color/tertiary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    <!-- Toast-like Tip with ImageView inside -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toast_background2"
+        android:backgroundTint="@color/secondary"
+        android:clipToPadding="false"
+        android:elevation="2dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingRight="21dp"
+        android:paddingLeft="21dp"
+        android:paddingBottom="21dp"
+        android:paddingTop="21dp">
+
+        <!-- Info Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_info"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Info"/>
+
+        <!-- Texts inside a vertical layout -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The 50/30/20 Rule"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/text_heading"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="16dp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/text"
+                android:lineHeight="27dp"
+                android:text="A balanced budget follows 50/30/20: 50% for needs, 30% for wants, and 20% for savings. Try to keep spending within these limits to earn monthly rewards." />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorLink="#48B381"
+        android:textSize="16dp"
+        app:rippleColor="#48B381"/>
+    </LinearLayout>
+
+</ScrollView>

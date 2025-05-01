@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home"
+    app:labelVisibilityMode="labeled"
+    >
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.iie.st10320489.marene.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.iie.st10320489.marene.ui.profile.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingFragment_to_edit_profile_Fragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.iie.st10320489.marene.ui.profile.EditProfileFragment"
+        android:label="@string/title_editProfile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/navigation_analysis"
+        android:name="com.iie.st10320489.marene.ui.analysis.AnalysisFragment"
+        android:label="@string/title_analysis"
+        tools:layout="@layout/fragment_analysis" />
+
+
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.iie.st10320489.marene.ui.add.AddFragment"
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="com.iie.st10320489.marene.ui.category.CategoryFragment"
+        android:label="@string/title_category"
+        tools:layout="@layout/fragment_category">
+
+        <action
+            android:id="@+id/action_categoryFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+
+        <action
+            android:id="@+id/action_categoryFragment_to_subcategoryFragment"
+            app:destination="@id/subcategoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.iie.st10320489.marene.ui.filter.FilterFragment"
+        android:label="FilterFragment" >
+        <action
+            android:id="@+id/action_transactionFragment_to_transactionDetailsFragment"
+            app:destination="@id/transactionDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_rewards"
+        android:name="com.iie.st10320489.marene.ui.rewards.RewardsFragment"
+        android:label="@string/title_rewards"
+        tools:layout="@layout/fragment_rewards" />
+
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.iie.st10320489.marene.ui.transaction.TransactionFragment"
+        android:label="TransactionFragment">
+        <action
+            android:id="@+id/action_transactionFragment_to_transactionDetailsFragment"
+            app:destination="@id/transactionDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transactionDetailsFragment"
+        android:name="com.iie.st10320489.marene.ui.transaction.TransactionDetailsFragment"
+        android:label="Transaction Details" />
+
+    <fragment
+        android:id="@+id/monthlySummaryFragment"
+        android:name="com.iie.st10320489.marene.graphs.MonthlySummaryFragment"
+        android:label="Monthly Summary"
+        tools:layout="@layout/fragment_monthly_summary" />
+
+    <fragment
+        android:id="@+id/subcategoryFragment"
+        android:name="com.iie.st10320489.marene.ui.subcategory.SubcategoryFragment"
+        android:label="Subcategories" >
+
+        <action
+            android:id="@+id/action_subcategoryFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+
+    <!--Rewards Nav-->
+    <!--<fragment
+        android:id="@+id/navigation_rewards_two"
+        android:name="com.iie.st10320489.marene.ui.rewards.FragmentRewardsTwo"
+        tools:layout="@layout/fragment_rewardstwo" />-->
+
+    <fragment
+        android:id="@+id/navigation_rewards_discount"
+        android:name="com.iie.st10320489.marene.ui.rewards.DiscountActivity"
+        tools:layout="@layout/activity_discount" />
+
+
+    <fragment
+        android:id="@+id/navigation_rewards_help"
+        android:name="com.iie.st10320489.marene.ui.profile.HelpActivity"
+        tools:layout="@layout/activity_help" />
+
+
+    <fragment
+        android:id="@+id/navigation_rewards_claimdetail"
+        android:name="com.iie.st10320489.marene.ui.rewards.ClaimDetailActivity"
+        tools:layout="@layout/activity_claim_detail">
+        <argument
+            android:name="IMAGE_RES_ID"
+            app:argType="integer" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_rewards_discountdetail"
+        android:name="com.iie.st10320489.marene.ui.rewards.DiscountDetailActivity"
+        tools:layout="@layout/activity_discount_detail">
+        <argument
+            android:name="discount_image"
+            app:argType="integer" />
+    </fragment>
+
+    <!--<fragment
+        android:id="@+id/navigation_rewards_claimed"
+        android:name="com.iie.st10320489.marene.ui.rewards.FragmentClaimedRewards"
+        tools:layout="@layout/fragment_claimed_rewards" />-->
+
+
+    <fragment
+        android:id="@+id/navigation_rewards_qr"
+        android:name="com.iie.st10320489.marene.ui.rewards.QrFragment"
+        tools:layout="@layout/activity_qr" />
+
+    <fragment
+        android:id="@+id/qrFragment"
+        android:name="com.iie.st10320489.marene.ui.rewards.QrFragment"
+        android:label="QR Code">
+        <!-- Add actions if needed -->
+    </fragment>
+
+
+</navigation>
